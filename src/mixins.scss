@@ -1,0 +1,10 @@
+@mixin ease($duration: 50) {
+    transition: all $duration*1ms;
+}
+
+@mixin shadow($size: 4) {
+    //Optional Shadow-Parameter
+    //When passing a larger value in the shadow gehts wider in a apealing way
+    $offset: $size - ($size / 3);
+    box-shadow: 0px 0px $size*1px $offset*-1px #5F5F5F;
+}
