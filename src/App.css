@@ -1,32 +1,134 @@
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 40vmin;
   }
-}
+  
+  .App-header {
+    max-width: 1000px;
+    margin: 50px auto 0;
+  }
+  
+  .App-title {
+    font-family: "St Marie";
+    font-size: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 0;
+  }
+  
+    @media screen and (min-width: 480px) {
+        .App-title {
+            font-size: 3.5rem;
+        }
+    }
+  
+    .App-title__main {
+      line-height: 2.5rem;
+    }
+  
+    .App-title__subtitle {
+      font-family: "Open Sans Light";
+      letter-spacing: 0.7em;
+      font-size: 1.4rem;
+      line-height: 3.2rem;
+    }
+  
+      @media screen and (min-width: 480px) {
+        .App-title {
+        font-size: 2rem;
+        line-height: 4.5rem;
+        }
+      }
+  
+  .App-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .App-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .App-grid__item {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      margin: 10px;
+      transition: all 50ms;
+      box-shadow: 0px 0px 4px 1px #5F5F5F;
+  }
+  
+  .App-grid__item:hover {
+        margin: 7px;
+        width: 306px;
+        height: 306px;
+      }
+  
+      .App-grid_item a {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+  
+      .App-grid__item a img {
+          width: 100%;
+        }
+  
+  .App-footer {
+    max-width: 1000px;
+    margin: 50px auto 100px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: flex-start;}
+  
+    .App-footer__headline {
+      font-family: "St Marie";
+      font-size: 1.4rem;
+      margin: 0;
+      padding: 0;
+    }
+  
+      @media screen and (min-width: 480px) {
+        .App-footer__headline {
+            font-size: 2rem;
+        }
+      }
+  
+    .App-footer__email {
+      font-family: "Open Sans Light";
+      font-size: 1rem;
+      margin: 0;
+      padding: 20px;
+      color: #000;
+    }
+  
+    .App-footer__email a {
+        color: #000;
+        text-decoration: none;
+    }
+  
+    .App-footer__email:hover {
+          text-decoration: underline;
+        }
+  
+    @media screen and (min-width: 480px) {
+    .App-footer__email {
+    font-size: 1.1rem;
+    }
+    }
+  
