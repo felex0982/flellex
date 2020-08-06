@@ -23,12 +23,6 @@
     margin: 0;
   }
   
-    @media screen and (min-width: 480px) {
-        .App-title {
-            font-size: 3.5rem;
-        }
-    }
-  
     .App-title__main {
       line-height: 2.5rem;
     }
@@ -39,13 +33,6 @@
       font-size: 1.4rem;
       line-height: 3.2rem;
     }
-  
-      @media screen and (min-width: 480px) {
-        .App-title {
-        font-size: 2rem;
-        line-height: 4.5rem;
-        }
-      }
   
   .App-content {
     max-width: 1000px;
@@ -65,7 +52,7 @@
       height: 300px;
       margin: 10px;
       transition: all 50ms;
-      box-shadow: 0px 0px 4px 1px #5F5F5F;
+      box-shadow: 0px 0px 4px -2px #5F5F5F;
   }
   
   .App-grid__item:hover {
@@ -103,12 +90,6 @@
       padding: 0;
     }
   
-      @media screen and (min-width: 480px) {
-        .App-footer__headline {
-            font-size: 2rem;
-        }
-      }
-  
     .App-footer__email {
       font-family: "Open Sans Light";
       font-size: 1rem;
@@ -127,8 +108,19 @@
         }
   
     @media screen and (min-width: 480px) {
-    .App-footer__email {
-    font-size: 1.1rem;
-    }
+        .App-title {
+            font-size: 3.5rem;
+        }
+        .App-title__subtitle {
+            font-size: 2rem;
+            line-height: 4.5rem;
+        }
+        .App-footer__headline {
+            font-size: 2rem;
+        }
+        .App-footer__email {
+            font-size: 1.1rem;
+        }
+
     }
   
