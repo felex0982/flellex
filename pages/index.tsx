@@ -4,12 +4,28 @@ import Layout from "../components/Layout";
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github";
 import { GetStaticProps } from "next";
 
-const IndexPage = ({ file }: any) => {
+interface IProps {
+  sourceProvider: any;
+  error: any;
+  preview: boolean;
+  file: IDataObject;
+}
+
+interface IDataObject {
+  fileRelativePath: string;
+  data: IDataInterface;
+}
+
+interface IDataInterface {
+  title: string;
+}
+
+const Home = ({ file }: IProps) => {
   const data = file.data;
 
   return (
     <Layout title="Home | Next.js + TypeScript Example">
-      <h1>Hello Next.js 👋</h1>
+      <h1>{data.title}</h1>
       <p>
         <Link href="/about">
           <a>About</a>
@@ -19,7 +35,7 @@ const IndexPage = ({ file }: any) => {
   );
 };
 
-export default IndexPage;
+export default Home;
 
 /**
  * Fetch data with getStaticProps based on 'preview' mode
