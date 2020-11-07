@@ -6,6 +6,33 @@ import {
   GithubMediaStore,
 } from "react-tinacms-github";
 
+import { createGlobalStyle, ThemeProvider } from "styled-components";
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Titillium Web;
+  }
+`;
+
+const theme = {
+  colors: {
+    primary: "#0070f3",
+  },
+  fonts: {
+    body: "Titillium Web, sans-serif",
+    heading: "Roboto Slab",
+    monospace: "Menlo, monospace",
+  },
+  fontWeights: {
+    body: 400,
+    heading: 300,
+    bold: 600,
+  },
+};
+
 export default class Site extends App {
   cms: TinaCMS;
 
@@ -35,17 +62,21 @@ export default class Site extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (
-      <TinaProvider cms={this.cms}>
-        <TinacmsGithubProvider
-          onLogin={onLogin}
-          onLogout={onLogout}
-          error={pageProps.error}
-        >
-          <EditLink cms={this.cms} />
-          hallo
-          <Component {...pageProps} />
-        </TinacmsGithubProvider>
-      </TinaProvider>
+      <>
+        <GlobalStyle />
+        <ThemeProvider theme={theme}>
+          <TinaProvider cms={this.cms}>
+            <TinacmsGithubProvider
+              onLogin={onLogin}
+              onLogout={onLogout}
+              error={pageProps.error}
+            >
+              <EditLink cms={this.cms} />
+              <Component {...pageProps} />
+            </TinacmsGithubProvider>
+          </TinaProvider>
+        </ThemeProvider>
+      </>
     );
   }
 }
