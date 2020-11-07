@@ -4,24 +4,23 @@ import Layout from "../components/Layout";
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github";
 import { GetStaticProps } from "next";
 
+import { usePlugin } from "tinacms";
+import { useGithubJsonForm } from "react-tinacms-github";
+
 interface IProps {
   sourceProvider: any;
   error: any;
   preview: boolean;
-  file: IDataObject;
-}
-
-interface IDataObject {
-  fileRelativePath: string;
-  data: IDataInterface;
-}
-
-interface IDataInterface {
-  title: string;
+  file: any;
 }
 
 const Home = ({ file }: IProps) => {
-  const data = file.data;
+  const formOptions = {
+    label: "Home Page",
+    fields: [{ name: "title", component: "text" }],
+  };
+  const [data, form] = useGithubJsonForm(file, formOptions);
+  usePlugin(form);
 
   return (
     <Layout title="Home | Next.js + TypeScript Example">
