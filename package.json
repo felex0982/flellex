@@ -8,14 +8,29 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
     "next": "latest",
+    "next-tinacms-github": "^0.32.1",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-tinacms-github": "^0.32.0",
+    "styled-components": "^5.2.1",
+    "tinacms": "^0.32.0"
   },
   "devDependencies": {
     "@types/node": "^12.12.21",
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
+    "@typescript-eslint/eslint-plugin": "^4.6.1",
+    "@typescript-eslint/parser": "^4.6.1",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-typescript": "^12.0.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-jest": "^24.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "hygen-next-tinacms-github": "https://github.com/dwalkr/hygen-next-tinacms-github",
+    "install-peerdeps": "^2.0.3",
+    "prettier": "^2.1.2",
     "typescript": "4.0"
   },
   "license": "MIT"
