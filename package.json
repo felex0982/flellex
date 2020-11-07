@@ -8,6 +8,7 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "@types/styled-components": "^5.1.4",
     "dotenv": "^8.2.0",
     "next": "latest",
     "next-tinacms-github": "^0.32.1",
