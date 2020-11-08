@@ -27,7 +27,7 @@ const Home = ({ file }: IProps) => {
     label: "Home Page",
     fields: [
       { name: "title", component: "text" },
-      { name: "subtitletitle", component: "text" },
+      { name: "subtitle", component: "text" },
       { name: "tagline", component: "text" },
     ],
   };
