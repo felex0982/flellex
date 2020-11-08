@@ -15,12 +15,10 @@ const StyledWrapper = styled.div`
   flex-direction: column;
 `;
 
-const Layout = ({ children, title = "This is the default title" }: Props) => (
+const Layout = ({ children, title = "Felix Wagner | Portfolio" }: Props) => (
   <StyledWrapper>
     <Head>
       <title>{title}</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <header>
       <nav>

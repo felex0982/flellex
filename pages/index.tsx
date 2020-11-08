@@ -25,13 +25,17 @@ const StyledSubtitle = styled.span`
 const Home = ({ file }: IProps) => {
   const formOptions = {
     label: "Home Page",
-    fields: [{ name: "title", component: "text" }],
+    fields: [
+      { name: "title", component: "text" },
+      { name: "subtitletitle", component: "text" },
+      { name: "tagline", component: "text" },
+    ],
   };
   const [data, form] = useGithubJsonForm(file, formOptions);
   usePlugin(form);
 
   return (
-    <Layout title={data.site_title}>
+    <Layout title={data.tagline}>
       <h1>{data.title}</h1>
       <StyledSubtitle>{data.subtitle}</StyledSubtitle>
       <p>

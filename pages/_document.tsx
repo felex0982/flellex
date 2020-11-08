@@ -32,6 +32,11 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
+          <meta charSet="utf-8" />
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
           <link
             href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Roboto+Slab:wght@300;400;600&family=Titillium+Web:ital,wght@0,300;1,300&display=swap"
             rel="stylesheet"
