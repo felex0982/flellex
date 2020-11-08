@@ -11,36 +11,24 @@ type Props = {
 const StyledWrapper = styled.div`
   width: 100%;
   min-height: 100vh;
+  padding: 50px;
   display: flex;
   flex-direction: column;
 `;
+
+const StyledFooter = styled.footer``;
 
 const Layout = ({ children, title = "Felix Wagner | Portfolio" }: Props) => (
   <StyledWrapper>
     <Head>
       <title>{title}</title>
     </Head>
-    <header>
-      <nav>
-        <Link href="/">
-          <a>Home</a>
-        </Link>{" "}
-        |{" "}
-        <Link href="/about">
-          <a>About</a>
-        </Link>{" "}
-        |{" "}
-        <Link href="/users">
-          <a>Users List</a>
-        </Link>{" "}
-        | <a href="/api/users">Users API</a>
-      </nav>
-    </header>
+    <header></header>
     {children}
-    <footer>
-      <hr />
-      <span>I'm here to stay (Footer)</span>
-    </footer>
+    <StyledFooter>
+      <h2>Contact</h2>
+      <a href="mailto:moin@fawagner.de">moin@fawagner.de</a>
+    </StyledFooter>
   </StyledWrapper>
 );
 

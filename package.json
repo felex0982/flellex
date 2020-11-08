@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@types/styled-components": "^5.1.4",
+    "@types/styled-system": "^5.1.10",
     "dotenv": "^8.2.0",
     "next": "latest",
     "next-tinacms-github": "^0.32.1",
@@ -16,6 +17,7 @@
     "react-dom": "^16.12.0",
     "react-tinacms-github": "^0.32.0",
     "styled-components": "^5.2.1",
+    "styled-system": "^5.1.5",
     "tinacms": "^0.32.0"
   },
   "devDependencies": {

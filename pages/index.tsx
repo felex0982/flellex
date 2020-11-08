@@ -7,6 +7,7 @@ import { GetStaticProps } from "next";
 
 import { usePlugin } from "tinacms";
 import { useGithubJsonForm } from "react-tinacms-github";
+import { typography, TypographyProps } from "styled-system";
 
 interface IProps {
   sourceProvider: any;
@@ -38,11 +39,6 @@ const Home = ({ file }: IProps) => {
     <Layout title={data.tagline}>
       <h1>{data.title}</h1>
       <StyledSubtitle>{data.subtitle}</StyledSubtitle>
-      <p>
-        <Link href="/about">
-          <a>About</a>
-        </Link>
-      </p>
     </Layout>
   );
 };

@@ -8,6 +8,7 @@ import {
 import Theme from "../themes/light";
 
 import { createGlobalStyle, ThemeProvider } from "styled-components";
+import Login from "../components/login";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -22,10 +23,14 @@ const GlobalStyle = createGlobalStyle`
   h1,h2{
     font-family: Roboto Slab, serif;
     font-weight: 300;
+    padding: 0;
+    margin: 0;
   }
   h3,h4,h5,h6 {
     font-family: Titillium Web, sans-serif;
     font-weight: 300;
+    padding: 0;
+    margin: 0;
   }
 `;
 
@@ -67,7 +72,7 @@ export default class Site extends App {
               onLogout={onLogout}
               error={pageProps.error}
             >
-              <EditLink cms={this.cms} />
+              {this.cms.enabled ? <Login /> : ""}
               <Component {...pageProps} />
             </TinacmsGithubProvider>
           </TinaProvider>
@@ -88,7 +93,7 @@ const onLogin = async () => {
   const resp = await fetch(`/api/preview`, { headers: headers });
   const data = await resp.json();
 
-  if (resp.status == 200) window.location.href = window.location.pathname;
+  if (resp.status == 200) window.location.replace("/");
   else throw new Error(data.message);
 };
 
@@ -96,16 +101,4 @@ const onLogout = () => {
   return fetch(`/api/reset-preview`).then(() => {
     window.location.reload();
   });
-};
-
-export interface EditLinkProps {
-  cms: TinaCMS;
-}
-
-export const EditLink = ({ cms }: EditLinkProps) => {
-  return (
-    <button onClick={() => cms.toggle()}>
-      {cms.enabled ? "Exit Edit Mode" : "Edit This Site"}
-    </button>
-  );
 };
