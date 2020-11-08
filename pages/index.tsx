@@ -1,13 +1,14 @@
 import Link from "next/link";
 import Layout from "../components/layout";
 import styled from "styled-components";
+import { typography, TypographyProps } from "styled-system";
 
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github";
 import { GetStaticProps } from "next";
 
 import { usePlugin } from "tinacms";
 import { useGithubJsonForm } from "react-tinacms-github";
-import { typography, TypographyProps } from "styled-system";
+import Heading from "../components/heading";
 
 interface IProps {
   sourceProvider: any;
@@ -16,11 +17,10 @@ interface IProps {
   file: any;
 }
 
-const StyledSubtitle = styled.span`
+const StyledSubtitle = styled(Heading)<TypographyProps>`
   font-family: ${(props) => props.theme.fonts.subheading};
   text-transform: uppercase;
-  font-size: ${(props) => props.theme.fontSizes[4]};
-  letter-spacing: ${(props) => props.theme.space[2]};
+  ${typography};
 `;
 
 const Home = ({ file }: IProps) => {
@@ -37,8 +37,10 @@ const Home = ({ file }: IProps) => {
 
   return (
     <Layout title={data.tagline}>
-      <h1>{data.title}</h1>
-      <StyledSubtitle>{data.subtitle}</StyledSubtitle>
+      <Heading as="h1">{data.title}</Heading>
+      <StyledSubtitle letterSpacing={[6, 10, 18]}>
+        {data.subtitle}
+      </StyledSubtitle>
     </Layout>
   );
 };
