@@ -33,12 +33,11 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <link
-            href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600&family=Titillium+Web:ital,wght@0,300;0,400;0,600;1,300&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Roboto+Slab:wght@300;400;600&family=Titillium+Web:ital,wght@0,300;1,300&display=swap"
             rel="stylesheet"
           />
         </Head>
         <body>
-          HALLO
           <Main />
           <NextScript />
         </body>

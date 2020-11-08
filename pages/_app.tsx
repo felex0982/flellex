@@ -5,6 +5,7 @@ import {
   TinacmsGithubProvider,
   GithubMediaStore,
 } from "react-tinacms-github";
+import Theme from "../themes/light";
 
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 
@@ -13,25 +14,20 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Titillium Web;
+    font-family: Open Sans, sans-serif;
+  }
+  b {
+    font-weight: 600;
+  }
+  h1,h2{
+    font-family: Roboto Slab, serif;
+    font-weight: 300;
+  }
+  h3,h4,h5,h6 {
+    font-family: Titillium Web, sans-serif;
+    font-weight: 300;
   }
 `;
-
-const theme = {
-  colors: {
-    primary: "#0070f3",
-  },
-  fonts: {
-    body: "Titillium Web, sans-serif",
-    heading: "Roboto Slab",
-    monospace: "Menlo, monospace",
-  },
-  fontWeights: {
-    body: 400,
-    heading: 300,
-    bold: 600,
-  },
-};
 
 export default class Site extends App {
   cms: TinaCMS;
@@ -64,7 +60,7 @@ export default class Site extends App {
     return (
       <>
         <GlobalStyle />
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={Theme}>
           <TinaProvider cms={this.cms}>
             <TinacmsGithubProvider
               onLogin={onLogin}

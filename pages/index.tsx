@@ -1,5 +1,6 @@
 import Link from "next/link";
-import Layout from "../components/Layout";
+import Layout from "../components/layout";
+import styled from "styled-components";
 
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github";
 import { GetStaticProps } from "next";
@@ -14,6 +15,13 @@ interface IProps {
   file: any;
 }
 
+const StyledSubtitle = styled.span`
+  font-family: ${(props) => props.theme.fonts.subheading};
+  text-transform: uppercase;
+  font-size: ${(props) => props.theme.fontSizes[4]};
+  letter-spacing: ${(props) => props.theme.space[2]};
+`;
+
 const Home = ({ file }: IProps) => {
   const formOptions = {
     label: "Home Page",
@@ -23,8 +31,9 @@ const Home = ({ file }: IProps) => {
   usePlugin(form);
 
   return (
-    <Layout title="Home | Next.js + TypeScript Example">
+    <Layout title={data.site_title}>
       <h1>{data.title}</h1>
+      <StyledSubtitle>{data.subtitle}</StyledSubtitle>
       <p>
         <Link href="/about">
           <a>About</a>
