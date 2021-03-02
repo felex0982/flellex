@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Layout from "../components/layout";
 import styled from "styled-components";
 import { typography, TypographyProps } from "styled-system";
@@ -41,6 +40,7 @@ const Home = ({ file }: IProps) => {
       <StyledSubtitle letterSpacing={[6, 10, 18]}>
         {data.subtitle}
       </StyledSubtitle>
+      <h2 className={"glitch"}>Hello</h2>
     </Layout>
   );
 };

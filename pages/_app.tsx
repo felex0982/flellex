@@ -1,4 +1,5 @@
 import App from "next/app";
+import "../style.css";
 import { TinaCMS, TinaProvider } from "tinacms";
 import {
   GithubClient,
