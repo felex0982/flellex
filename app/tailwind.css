@@ -477,28 +477,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: flex;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
-.h-10 {
-  height: 2.5rem;
-}
-
-.h-6 {
-  height: 1.5rem;
-}
-
-.h-5 {
-  height: 1.25rem;
-}
-
 .h-4 {
   height: 1rem;
-}
-
-.min-h-\[70vh\] {
-  min-height: 70vh;
 }
 
 .min-h-\[50vh\] {
@@ -509,24 +489,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100%;
 }
 
-.w-12 {
-  width: 3rem;
-}
-
-.max-w-4xl {
-  max-width: 56rem;
-}
-
 .max-w-2xl {
   max-width: 42rem;
 }
 
 .flex-col {
   flex-direction: column;
-}
-
-.items-center {
-  align-items: center;
 }
 
 .justify-center {
@@ -537,10 +505,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
-}
-
-.p-8 {
-  padding: 2rem;
 }
 
 .p-4 {
@@ -557,15 +521,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 2rem;
 }
 
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-.pb-4 {
-  padding-bottom: 1rem;
-}
-
 .pb-2 {
   padding-bottom: 0.5rem;
 }
@@ -574,34 +529,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-family: Roboto Slab;
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-lg {
-  font-size: 1.125rem;
+.text-xl {
+  font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .font-bold {
@@ -612,36 +557,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 100;
 }
 
-.font-light {
-  font-weight: 300;
-}
-
 .uppercase {
   text-transform: uppercase;
-}
-
-.tracking-wide {
-  letter-spacing: 0.025em;
-}
-
-.tracking-widest {
-  letter-spacing: 0.1em;
-}
-
-.tracking-\[10px\] {
-  letter-spacing: 10px;
-}
-
-.tracking-\[8px\] {
-  letter-spacing: 8px;
-}
-
-.tracking-\[12px\] {
-  letter-spacing: 12px;
-}
-
-.tracking-\[4px\] {
-  letter-spacing: 4px;
 }
 
 .tracking-\[5px\] {
