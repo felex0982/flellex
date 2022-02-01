@@ -12,6 +12,13 @@ npm run dev
 
 This starts your app in development mode, rebuilding assets on file changes.
 
+```sh
+npm run dev:tailwind
+npm run dev:remix
+```
+
+These commands can startup the remix and tailwind dev builds seperately
+
 ## Deployment
 
 First, build your app for production:

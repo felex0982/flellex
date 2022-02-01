@@ -7,15 +7,19 @@ import {
   ScrollRestoration,
 } from "remix";
 import type { MetaFunction } from "remix";
+import gobalStyles from "./global.css";
 import tailwindStyles from "./tailwind.css";
 // styles is now something like /build/global-AE33KB2.css
 
 export function links() {
-  return [{ rel: "stylesheet", href: tailwindStyles }];
+  return [
+    { rel: "stylesheet", href: gobalStyles },
+    { rel: "stylesheet", href: tailwindStyles },
+  ];
 }
 
 export const meta: MetaFunction = () => {
-  return { title: "New Remix App" };
+  return { title: "Felix Wagner - Portfolio" };
 };
 
 export default function App() {
