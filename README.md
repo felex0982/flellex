@@ -1,14 +1,3 @@
-# Portfolio with NextJs + TinaCms
+# Portfolio
 
-## Development
 
-```bash
-yarn install
-yarn dev
-```
-
-## Deployment
-
-```bash
-
-```
