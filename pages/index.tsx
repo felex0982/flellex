@@ -2,7 +2,8 @@ import classNames from "classnames";
 import Layout from "../components/layout";
 import Logo from "../components/logo";
 import Image from "next/image";
-import WalkGraphic from "../components/walk.graphic";
+import TplGraphic from "../components/tpl.graphic";
+import BtlGraphic from "../components/btl.graphic";
 
 const Index = () => {
   return (
@@ -55,7 +56,47 @@ const Index = () => {
             src="/emperf.png"
             layout="fill"
           />
-          <WalkGraphic />
+        </div>
+        <div
+          className={classNames(
+            "flex",
+            "flex-col",
+            "justify-center",
+            "px-4",
+            "py-8",
+            "space-y-8"
+          )}
+        >
+          <div className={classNames("text-center")}>
+            <h2
+              className={classNames(
+                "text-sm",
+                "font-thin",
+                "pb-2",
+                "text-center"
+              )}
+            >
+              Currently Working at:
+            </h2>
+            <a href="https://thepeaklab.com/">
+              <TplGraphic className={classNames("w-44")} />
+            </a>
+          </div>
+          <div className={classNames("text-center")}>
+            <h2
+              className={classNames(
+                "text-sm",
+                "font-thin",
+                "pb-2",
+                "text-center"
+              )}
+            >
+              Check out my Gin Project:
+            </h2>
+            <a href="https://bottlebase.com">
+              <BtlGraphic className={classNames("w-44")} />
+            </a>
+          </div>
         </div>
       </div>
     </Layout>

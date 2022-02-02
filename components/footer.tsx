@@ -12,9 +12,9 @@ const Footer = () => {
         "dark:text-stone-800"
       )}
     >
-      <a href="https://flellex.de">Contact Page</a>
-      <span> | </span>
-      <a href="https://bottlebase.com">Bottlebase</a>
+      <a className={classNames("hover:underline")} href="moin@fawagner.de">
+        Contact: moin@fawagner.de
+      </a>
     </footer>
   );
 };
