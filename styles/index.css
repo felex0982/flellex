@@ -5,6 +5,10 @@
 @tailwind utilities;
 
 @layer components {
+  .toaster {
+    @apply bg-white dark:bg-black text-black dark:text-white;
+  }
+
   @keyframes distort {
     33% {
       transform: translate(-1%) scale(0.99, 1.01);
