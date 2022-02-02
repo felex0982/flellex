@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&family=Roboto:wght@300;400;500;700;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  @keyframes distort {
+    33% {
+      transform: translate(-1%) scale(0.99, 1.01);
+    }
+
+    66% {
+      transform: translate(2%) scale(0.99, 0.98);
+    }
+
+    80% {
+      transform: translate(-2%) scale(1.02, 1.01);
+    }
+  }
+
+  @keyframes distort2 {
+    15% {
+      transform: translate(2%) scale(0.98, 1.02);
+    }
+
+    50% {
+      transform: translate(-1%) scale(1.04, 1.02);
+    }
+
+    66% {
+      transform: translate(1%) scale(0.98, 0.97);
+    }
+  }
+
+  .text-glitch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+  }
+
+  .text-glitch::before {
+    content: attr(data-text);
+    position: absolute;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 62%, 0% 62%);
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: distort;
+  }
+
+  .text-glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    overflow: hidden;
+    clip-path: polygon(0% 10%, 100% 10%, 100% 100%, 0% 100%);
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-name: distort2;
+  }
+}
