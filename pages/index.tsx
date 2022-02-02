@@ -50,10 +50,9 @@ const Index = () => {
             "relative"
           )}
         >
-          <Image
-            className={classNames("dark:invert")}
+          <img
+            className={classNames("dark:invert", "object-cover")}
             src="/emperf.png"
-            layout="fill"
           />
         </div>
         <div
