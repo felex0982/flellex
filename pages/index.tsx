@@ -1,6 +1,5 @@
 import classNames from "classnames";
 import Layout from "../components/layout";
-import Image from "next/image";
 import TplGraphic from "../components/tpl.graphic";
 import BtlGraphic from "../components/btl.graphic";
 
