@@ -42,6 +42,7 @@ const Index = () => {
         <div
           className={classNames(
             "max-w-full",
+            "max-w-[520px]",
             "max-h-[60vh]",
             "w-full",
             "aspect-square",
